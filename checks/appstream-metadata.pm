@@ -37,6 +37,10 @@ use File::Basename qw(basename);
 
 use Lintian::Tags qw(tag);
 
+# Allow check to be disabled, as it seem to trigger on all packages, and
+# made me suspect the test is wrong.
+my $warndesktop = 0;
+
 sub run {
     my ($pkg, $type, $info, $proc, $group) = @_;
 
@@ -69,6 +73,18 @@ sub run {
     if (defined(my $dir = $info->index_resolved_path('lib/udev/rules.d/'))) {
         for my $file ($dir->children('breadth-first')) {
             push(@udevrules, $file) if ($file->is_file);
+        }
+    }
+
+    if ($warndesktop) {
+        for my $desktop (keys %desktopfiles) {
+            my $base = basename($desktop);
+            my $foundmetainfo = 0;
+            for my $d ('usr/share/metainfo', 'usr/share/appdata') {
+                $foundmetainfo = 1 if (exists $metainfo{$d.$base});
+            }
+            tag('appstream-desktop-but-no-metadata', $desktop)
+                if (! $foundmetainfo);
         }
     }
 

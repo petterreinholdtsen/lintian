@@ -4,6 +4,21 @@ Type: binary
 Needs-Info: unpacked
 Info: This script checks the AppStream metadata files for problems.
 
+Tag: appstream-desktop-but-no-metadata
+Severity: minor
+Certainty: certain
+Ref: https://wiki.debian.org/AppStream/Guidelines
+Info: The package contain a .desktop file but no equivalent AppStream
+ metadata in /usr/share/metadata/.
+
+Tag: appstream-desktop-metadata-but-no-desktop
+Severity: important
+Certainty: certain
+Ref: https://wiki.debian.org/AppStream/Guidelines
+Info: The package contain a AppStream file in /usr/share/metadata/ but
+ no equivalent .desktop file .
+ FIXME Explain in more detail.
+
 Tag: appstream-metadata-in-legacy-location
 Severity: minor
 Certainty: certain
