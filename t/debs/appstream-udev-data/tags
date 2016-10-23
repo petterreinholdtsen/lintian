@@ -1,1 +1,3 @@
 W: appstream-udev-data: desktop-command-not-in-package usr/share/applications/appstream-udev-data.desktop true
+W: appstream-udev-data: udev-rule-missing-uaccess lib/udev/rules.d/60-appstream-udev-data.rules:2 user accessible device missing TAG+="uaccess"
+W: appstream-udev-data: udev-rule-missing-uaccess lib/udev/rules.d/60-appstream-udev-data.rules:5 user accessible device missing TAG+="uaccess"
