@@ -1,0 +1,4 @@
+Testname: appstream-udev-data
+Version: 1.0
+Description: Test AppStream and udev metadata in binary package
+Test-For:
