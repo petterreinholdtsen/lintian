@@ -1,3 +1,9 @@
+E: appstream-udev-data: appstream-metadata-legacy-format usr/share/appdata/appstream-udev-data-obsolete.metadata.xml
+W: appstream-udev-data: appstream-metadata-in-legacy-location usr/share/appdata/appstream-udev-data-obsolete.metadata.xml
+W: appstream-udev-data: appstream-metadata-in-legacy-location usr/share/appdata/appstream-udev-data.metadata.xml
+W: appstream-udev-data: appstream-metadata-malformed-modalias-provide usr/share/appdata/appstream-udev-data.metadata.xml include non-valid hex digit in USB matching rule 'usb:v0000p000ad*'
+W: appstream-udev-data: appstream-metadata-missing-modalias-provide lib/udev/rules.d/60-appstream-udev-data.rules match rule usb:v0000p0005d*
+W: appstream-udev-data: appstream-metadata-missing-modalias-provide lib/udev/rules.d/60-appstream-udev-data.rules match rule usb:v0000p000Ad*
 W: appstream-udev-data: desktop-command-not-in-package usr/share/applications/appstream-udev-data.desktop true
 W: appstream-udev-data: udev-rule-missing-uaccess lib/udev/rules.d/60-appstream-udev-data.rules:2 user accessible device missing TAG+="uaccess"
 W: appstream-udev-data: udev-rule-missing-uaccess lib/udev/rules.d/60-appstream-udev-data.rules:5 user accessible device missing TAG+="uaccess"
