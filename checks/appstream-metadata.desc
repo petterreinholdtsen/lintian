@@ -16,7 +16,7 @@ Severity: important
 Certainty: certain
 Ref: https://wiki.debian.org/AppStream/Guidelines
 Info: The package contain a AppStream file in /usr/share/metadata/ but
- no equivalent .desktop file .
+ no equivalent .desktop file.
  FIXME Explain in more detail.
 
 Tag: appstream-metadata-in-legacy-location
